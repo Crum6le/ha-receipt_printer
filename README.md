@@ -6,7 +6,9 @@
 
 [![hacs][hacsbadge]][hacs]
 
-_Integration to control Epson receipt printers in Home Assistant._
+Integration to control Epson (or anything supported by the ESCPOS library) receipt printers from Home Assistant.
+
+_Disclaimer: This was vibe coded. It's a very straightforward and scoped component though, which makes me comfortable releasing it. It has been reviewed, and works well for me. But I want to be up front about that._
 
 ## Features
 
@@ -20,7 +22,7 @@ _Integration to control Epson receipt printers in Home Assistant._
 - **Status Monitoring**: 
   - Binary sensor for online/offline status
   - Sensor for paper status (ok, low, out)
-- **Configurable Printer Settings**: Support for different printer models with customizable column widths and image sizes
+- **Configurable Printer Settings**: Support for different printer models with customizable column widths and dot/pixel widths (for images). 
 
 ## Installation
 
