@@ -72,6 +72,7 @@ This integration uses the [python-escpos](https://github.com/python-escpos/pytho
 
 Tested models:
 - Epson TM-T88VI
+- Epson TM-T88IV
 
 Other ESC/POS compatible printers should work but may require adjusting the column widths and image size settings during configuration.
 
