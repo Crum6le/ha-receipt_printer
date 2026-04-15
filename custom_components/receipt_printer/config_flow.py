@@ -88,10 +88,13 @@ class ReceiptPrinterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required{
                         CONF_PRINTER_PORT,
                         default=(user_input or {}).get(CONF_PRINTER_PORT, 9100),
-                        selector.TextSelectorConfig(
-                            type=selector.TextSelectorType.TEXT,
-                        },
-                    },
+                        selector.NumberSelector(
+                            selector.NumberSelectorConfig(
+                                min=1,
+                                mmax=9999
+                                mode=selector.NumberSelectorMode.BOX,
+                        ),
+                    ),
                     vol.Optional(
                         CONF_COLUMNS_FONT_A,
                         default=(user_input or {}).get(CONF_COLUMNS_FONT_A, 42),
