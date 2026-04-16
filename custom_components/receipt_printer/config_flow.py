@@ -88,10 +88,10 @@ class ReceiptPrinterFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required{
                         CONF_PRINTER_PORT,
                         default=(user_input or {}).get(CONF_PRINTER_PORT, 9100),
-                        selector.NumberSelector(
+                    ): selector.NumberSelector(
                             selector.NumberSelectorConfig(
                                 min=1,
-                                mmax=9999
+                                mmax=9999,
                                 mode=selector.NumberSelectorMode.BOX,
                         ),
                     ),
